@@ -1,29 +1,16 @@
 {
-    "title": "Full Slider",
-    "name": "startbootstrap-full-slider",
-    "version": "4.0.0",
-    "description": "A full page image slider HTML template built with Bootstrap",
-    "keywords": [
-        "css",
-        "sass",
-        "html",
-        "responsive",
-        "theme",
-        "template"
-    ],
-    "homepage": "https://startbootstrap.com/template-overviews/full-slider",
-    "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-full-slider/issues",
-        "email": "feedback@startbootstrap.com"
-    },
+    "title": "i-swap-me",
+    "name": "i-swap-me",
+    "version": "0.1.0",
+    "description": "An app to allow users to swap services",
     "license": "MIT",
-    "author": "Start Bootstrap",
+    "author": "Kishonivan Hamilton III",
     "contributors": [
-        "David Miller (http://davidmiller.io/)"
+        "Kishon Hamilton"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-full-slider.git"
+        "url": "https://github.com/juhuyoon/Swap_Me_App.git"
     },
     "dependencies": {
         "bootstrap": "4.0.0",
