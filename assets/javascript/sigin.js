@@ -1,5 +1,6 @@
-class FireBase {
-    toggleSignIn() {
+(function ($) {
+
+    function toggleSignIn() {
         if (firebase.auth().currentUser) {
             // [START signout]
             firebase.auth().signOut();
@@ -36,9 +37,9 @@ class FireBase {
         document.getElementById('quickstart-sign-in').disabled = false;
     }
 
-    handleSignUp() {
-        let email = document.getElementById('email').value;
-        let password = document.getElementById('password').value;
+    $('#submit').on('click',function(){
+        let email = document.getElementById('exampleInputEmail1').value;
+        let password = document.getElementById('exampleInputPassword1').value;
         if (email.length < 4) {
             alert('Please enter an email address.');
             return;
@@ -54,7 +55,7 @@ class FireBase {
             let errorCode = error.code;
             let errorMessage = error.message;
             // [START_EXCLUDE]
-            if (errorCode == 'auth/weak-password') {
+            if (errorCode === 'auth/weak-password') {
                 alert('The password is too weak.');
             } else {
                 alert(errorMessage);
@@ -63,9 +64,10 @@ class FireBase {
             // [END_EXCLUDE]
         });
         // [END createwithemail]
-    }
 
-    sendEmailVerification() {
+    });
+
+    function sendEmailVerification() {
         // [START sendemailverification]
         firebase.auth().currentUser.sendEmailVerification().then(function () {
             // Email Verification sent!
@@ -76,7 +78,7 @@ class FireBase {
         // [END sendemailverification]
     }
 
-    sendPasswordReset() {
+    function sendPasswordReset() {
         let email = document.getElementById('email').value;
         // [START sendpasswordemail]
         firebase.auth().sendPasswordResetEmail(email).then(function () {
@@ -100,7 +102,7 @@ class FireBase {
         // [END sendpasswordemail];
     }
 
-    initApp() {
+    function initApp() {
         // Listening for auth state changes.
         // [START authstatelistener]
         firebase.auth().onAuthStateChanged(function (user) {
@@ -144,11 +146,9 @@ class FireBase {
         document.getElementById('quickstart-password-reset').addEventListener('click', sendPasswordReset, false);
     }
 
- /*   window
-.
-    onload = function () {
+  /*  window.onload = function () {
         initApp();
-    };*/
+    };
+*/
 
-
-}
+})(jQuery);
