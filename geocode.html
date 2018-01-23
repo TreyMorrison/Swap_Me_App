@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Geocode </title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+           * element that contains the map. */
+    
+        #map {
+            height: 50%;
+            width: 50%;
+        }
+    
+        /* Optional: Makes the sample page fill the window. */
+    
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <h2 id="text-center">Enter Location: </h2>
+        <form id="location-form">
+            <input type="text" id="location-input" class="form-control form-control-lg">
+            <br>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+        <div class="card-block" id="formatted-address"></div>
+        <div class="card-block" id="address-components"></div>
+        <div class="card-block" id="geometry"></div>
+    </div>
+    <div id="map"></div>
+
+
+
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQWJeKbtLpWX-k0OpnluVrQnMATWJXAO4&callback=initMap"
+        async defer></script>
+    <script type="text/javascript" src="assets/google_map_API/geocode.js"></script>
+
+  </body>
+</html>
