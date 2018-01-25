@@ -17,6 +17,10 @@
     <link href="../../landing_page/css/full-slider.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../../landing_page/css/custom.css">
 
+    <!-- Load Firebase-->
+
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+
 </head>
 
 <body>
@@ -91,12 +95,19 @@
 
             <div class="container">
                 <label><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+                <input type="text" placeholder="Enter Username" id="input-username" required>
 
                 <label><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <input type="password" placeholder="Enter Password" id="input-password" required>
 
-                <button type="submit">Login</button>
+                <button id="button-login" >Login</button>
+                <button id="button-signup" >SignUp</button>
+                Firebase sign-in status: <span id="button-login-status">Unknown</span>
+                <div class="quickstart-user-details-container">
+                    Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
+                    <div>Firebase auth <code>currentUser</code> object value:</div>
+                    <pre><code id="quickstart-account-details">null</code></pre>
+                </div>
             </div>
         </form>
 
@@ -120,8 +131,9 @@
 
 <!-- Load app -->
 <script src="../../Utils/init-firebase.js"></script>
-<script src="./signin.js"></script>
 <script src="./events.js"></script>
+<script src="./signin.js"></script>
+
 
 
 </body>

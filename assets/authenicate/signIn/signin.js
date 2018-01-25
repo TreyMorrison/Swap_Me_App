@@ -3,9 +3,10 @@ function toggleSignIn() {
         // [START signout]
         firebase.auth().signOut();
         // [END signout]
+        window.location.replace("./assets/profile/edit/profile-edit.html");
     } else {
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
+        var email = document.getElementById('input-username').value;
+        var password = document.getElementById('input-password').value;
         if (email.length < 4) {
             alert('Please enter an email address.');
             return;
@@ -27,10 +28,16 @@ function toggleSignIn() {
                 alert(errorMessage);
             }
             console.log(error);
-            document.getElementById('quickstart-sign-in').disabled = false;
+            document.getElementById('button-signup').disabled = false;
             // [END_EXCLUDE]
+
         });
         // [END authwithemail]
+
+        window.location.replace("./assets/profile/edit/profile-edit.html");
+
+
     }
-    document.getElementById('quickstart-sign-in').disabled = true;
+    document.getElementById('button-signup').disabled = true;
 }
+
