@@ -79,7 +79,7 @@ var map;
 
     function doGeocode(){
         var geocoder = new google.maps.Geocoder();
-
+        //I need the firebase Data to be connected in order to bounce back the addresses from the data. 
         getLatLng(geocoder, "136 Carlyle Lake Decatur GA");
         getLatLng(geocoder,"1403 Tuxworth Circle Decatur GA");
 
