@@ -1,3 +1,21 @@
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+#map {
+	height: 35em;
+	width: 35em;
+	cursor: pointer !important;
+}
+
+.col-centered {
+	float: none;
+	margin: 10% 0 0% 0%;
+
+}
+
 #footer{
 	background-color: #124c12!important;
 }

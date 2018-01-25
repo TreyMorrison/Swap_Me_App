@@ -10,6 +10,7 @@ var map;
         map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: 33.753746, lng: -84.386330}, // TODO change to start location
             zoom: 10, // continent level
+            mapTypeId: google.maps.MapTypeId.ROADMAP
         });
 
         var directionService = new google.maps.DirectionsService();
@@ -30,6 +31,7 @@ var map;
             label:"B",
             map:map
         });
+        
 
         // renderRoute == not a function!!
         // Missing in the question...
@@ -41,8 +43,6 @@ var map;
 
     function getLatLng(geocoder, address) {
         geocoder.geocode({'address': address}, function(results, status) {
-
-            console.log("callbackCounter: "+callbackCounter);
 
             if (status === 'OK') {
                 if(results[0].geometry.location){
