@@ -38,6 +38,6 @@ function toggleSignIn() {
 
 
     }
-    document.getElementById('button-signup').disabled = true;
+    //document.getElementById('button-signup').disabled = true;
 }
 
