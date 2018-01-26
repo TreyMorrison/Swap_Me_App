@@ -15,7 +15,7 @@ var signIn = function(email,password){
               
         // ...
     });
-}
+};
 
 
 (function($){
