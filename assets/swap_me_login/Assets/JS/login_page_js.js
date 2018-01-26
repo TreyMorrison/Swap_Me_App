@@ -25,16 +25,13 @@ var signIn = function(email,password){
         var password = $('#input-password').val();
 
         signIn(email, password);
-        window.location.replace(url='./profile.html');
-
-        
-    });
-
     
-/*
+    });
+    
+
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-          // User is signed in.
+            window.location = './profile.html'
           var displayName = user.displayName;
           var email = user.email;
           var emailVerified = user.emailVerified;
@@ -50,5 +47,5 @@ var signIn = function(email,password){
           // User is signed out.
           // ...
         }
-      });*/
+      });
 })(jQuery);
