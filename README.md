@@ -7,7 +7,7 @@ Everyone has a craft they are skilled at performing. At iSwap.me we want to conn
 Jung Yoon https://github.com/juhuyoon/
 Kishon Hamilton
 Nickolas Buchanan https://github.com/nickolasbuchanan
-TC Twidt
+TC Twidt https://github.com/twidt
 Stephen Morrison III
 
 ## Getting Started
