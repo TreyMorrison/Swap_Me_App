@@ -23,6 +23,7 @@
 
     <!-- Custom styles for this template -->
     <link href="assets/profile_page/css/resume.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
 
 </head>
 
@@ -66,6 +67,11 @@
                         <a class="dropdown-item" href="profile_four.html">Minnie Mouse</a>
                     </div>
                 </li>
+
+                <li class="nav-item">
+                    <button id="button-logout" type="button" class="btn btn-danger">LogOut </button>
+                </li>
+
             </ul>
         </div>
     </nav>
@@ -79,7 +85,9 @@
                         <div class="col-md-8">
                             <form class>
                                 <div class="form-group">
-                                    <label for="first-name-input"><h4>First name</h4></label>
+                                    <label for="first-name-input">
+                                        <h4>First name</h4>
+                                    </label>
                                     <input type="text" class="form-control" id="first-name-input" placeholder="First name" value="Mark" required>
                                 </div>
                                 <div class="form-group">
@@ -149,11 +157,6 @@
                 <script asyncdefer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQWJeKbtLpWX-k0OpnluVrQnMATWJXAO4&callback=doGeocode"
                     async defer></script>
 
-                <!-- Google map API -->
-                <script type="text/javascript" src="assets/google_map_API/newgeocode.js"></script>
-                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQWJeKbtLpWX-k0OpnluVrQnMATWJXAO4&callback=doGeocode"
-                    async defer></script>
-
                 <!-- Bootstrap core JavaScript -->
                 <script type="text/javascript" src="assets/profile_page/vendor/jquery/jquery.min.js"></script>
                 <script type="text/javascript" src="assets/profile_page/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -161,6 +164,10 @@
                 <!-- Plugin JavaScript -->
                 <script type="text/javascript" src="assets/profile_page/vendor/jquery-easing/jquery.easing.min.js"></script>
 
+                <!-- Custom scripts for this template -->
+                <script type="text/javascript" src="assets/profile_page/js/resume.js"></script>
+                <script type="text/javascript" src="./assets/utils/init.js"></script>
+                <script type="text/javascript" src="./assets/utils/signout.js"></script>
 
 </body>
 
