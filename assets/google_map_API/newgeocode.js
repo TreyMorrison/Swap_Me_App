@@ -8,7 +8,7 @@ var map;
         console.log("Map initialisation");
 
         map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 33.753746, lng: -84.386330}, // TODO change to start location
+            center: {lat:42.742189,lng:-93.19717100000003}, // TODO change to start location
             zoom: 10, // continent level
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
@@ -16,7 +16,7 @@ var map;
         var directionService = new google.maps.DirectionsService();
         var directionRender = new google.maps.DirectionsRenderer({
             map: map
-        });
+        }); 
 
         var markerA = new google.maps.Marker({
             position: fromLocation,
@@ -76,12 +76,14 @@ var map;
             }
         });
     }
-
+//get the address
+    var add = document.getElementById("address").innerText
+    console.log(add)
     function doGeocode(){
         var geocoder = new google.maps.Geocoder();
         //I need the firebase Data to be connected in order to bounce back the addresses from the data. 
-        getLatLng(geocoder, "136 Carlyle Lake Decatur GA");
-        getLatLng(geocoder,"1403 Tuxworth Circle Decatur GA");
+        getLatLng(geocoder, add);
+        getLatLng(geocoder, add);
 
         // Wait for from and dest locations found ( Geocoder get delay )
         var waitForCoords = setInterval(function(){
@@ -97,3 +99,6 @@ var map;
 
         },50);
     }
+
+
+    
