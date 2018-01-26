@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login</title>
+    <title>Login</title>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-	<link rel="stylesheet" type="text/css" href="assets/swap_me_login/Assets/CSS/login_page_css.css">
+    <link rel="stylesheet" type="text/css" href="assets/swap_me_login/Assets/CSS/login_page_css.css">
+
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
 
 
 </head>
@@ -13,26 +16,36 @@
 
 <h2>iSwapMe</h2>
 
-<form action="action_page.php">
-  
-  <div class="container">
-    <label><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+<form>
 
-    <label><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <div class="container">
+        <label><b>Username</b></label>
+        <input id="input-username" type="text" placeholder="Enter Username" name="uname" required>
 
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked"> Remember me
-    </label>
-  </div>
+        <label><b>Password</b></label>
+        <input id="input-password" type="password" placeholder="Enter Password" name="psw" required>
 
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
+        <button id="button-login" type="submit">Login</button>
+        <button id="button-login" type="submit">Login</button>
+        <label>
+            <input type="checkbox" checked="checked"> Remember me
+        </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+    Firebase sign-in status: <span id="button-login-status">Unknown</span>
+    <div class="quickstart-user-details-container">
+        Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
+        <div>Firebase auth <code>currentUser</code> object value:</div>
+        <pre><code id="quickstart-account-details">null</code></pre>
+    </div>
 </form>
 <script src="https://code.jquery.com/jquery.js"></script>
+<script src="./assets/utils/init.js"></script>
+<script src="./assets/landing_page/js/singin.js"></script>
+
 </body>
 </html>
