@@ -18,6 +18,7 @@ var signIn = function(email,password){
 };
 
 
+
 (function($){
     $('#button-login').on('click', function(evt){
         evt.preventDefault();
@@ -48,4 +49,4 @@ var signIn = function(email,password){
           // ...
         }
       });
-})(jQuery);
+})(jQuery); 
