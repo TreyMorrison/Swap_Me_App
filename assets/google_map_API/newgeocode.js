@@ -11,7 +11,7 @@ var map;
                 lat: 42.742235,
                 lng: -93.189237999999
             }, // TODO change to start location
-            zoom: 10, // continent level
+            zoom: 13, // continent level
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
 
