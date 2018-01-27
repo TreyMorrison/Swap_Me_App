@@ -19,24 +19,33 @@ In order to get started CREATE an account and LOGIN and GET SWAPPING. If you wou
 * [Bootstrap](https://getbootstrap.com/) - The web styling used
 * [Firebase] (https://firebase.google.com/) - The database used
 * [Google Maps API] (https://developers.google.com/maps/) - Map interface
+* [Geocode API] (https://developers.google.com/maps/documentation/geocoding/start) - Finding coordinates via Street Address
 
 ### JavaScript Code Snippets
 
-A step by step series of examples that tell you have to get a development env running
+* How to create a interactive google map. [Google Map API]
+` function initMap() {
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+        console.log("Map initialisation");
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {
+                lat: {coords},
+                lng: {coords}
+            }, // TODO change to start location
+            zoom: #, // continent level
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+`
+* How to get the coordinates of a location via Street Address [Geocode API]
+` function getLatLng(geocoder, address) {
+        geocoder.geocode({'address': address}, function(results, status) {
+                (results[0].geometry.location)
+                    var latlong = JSON.stringify(results[0].geometry.location);
+`
+ ` function doGeocode(){
+        var geocoder = new google.maps.Geocoder();
+        getLatLng(geocoder, address);
+`
 
 
 
@@ -46,7 +55,7 @@ End with an example of getting some data out of the system or using it for a lit
 
 * John McSwain
 * startbootstrap.com for themes
-*
+
 
 ### Prerequisites
 

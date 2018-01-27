@@ -33,13 +33,6 @@ var map;
             label:"B",
             map:map
         });
-        
-
-        // renderRoute == not a function!!
-        // Missing in the question...
-        // Temporarly commented out.
-        //
-        //renderRoute(directionService, directionRender, fromLocation, destLocation);
 
     } // end of initMap
 
