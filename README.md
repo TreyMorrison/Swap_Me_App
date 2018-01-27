@@ -5,10 +5,10 @@ Everyone has a craft they are skilled at performing. At iSwap.me we want to conn
 # Authors
 
 Jung Yoon https://github.com/juhuyoon/
-Kishon Hamilton
+Kishon Hamilton https://github.com/kishonhamilton
 Nickolas Buchanan https://github.com/nickolasbuchanan
 TC Twidt https://github.com/twidt
-Stephen Morrison III
+Stephen Morrison III https://github.com/TreyMorrison
 
 ## Getting Started
 
@@ -24,8 +24,8 @@ In order to get started CREATE an account and LOGIN and GET SWAPPING. If you wou
 ### JavaScript Code Snippets
 
 * How to create a interactive google map. [Google Map API]
-` function initMap() {
-
+` 
+    function initMap() {
         console.log("Map initialisation");
         map = new google.maps.Map(document.getElementById('map'), {
             center: {
@@ -35,13 +35,15 @@ In order to get started CREATE an account and LOGIN and GET SWAPPING. If you wou
             zoom: #, // continent level
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
-`
+
 * How to get the coordinates of a location via Street Address [Geocode API]
-` function getLatLng(geocoder, address) {
+`
+ function getLatLng(geocoder, address) {
         geocoder.geocode({'address': address}, function(results, status) {
                 (results[0].geometry.location)
                     var latlong = JSON.stringify(results[0].geometry.location);
 `
+*  Converting the Street Addresses after pulling from the DOM.
  ` function doGeocode(){
         var geocoder = new google.maps.Geocoder();
         getLatLng(geocoder, address);
