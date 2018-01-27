@@ -15,7 +15,7 @@ The GREAT part is there is NO NEED FOR CASH!
 ## Getting Started
 
 In order to get started CREATE an account and LOGIN and GET SWAPPING.   
-If you would like to work with the code the repository can be found at https://github.com/juhuyoon/Swap_Me_App
+If you would like to work with the code the repository can be found [here](https://github.com/juhuyoon/Swap_Me_App)
 
 ## Built With
 
