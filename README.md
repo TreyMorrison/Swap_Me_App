@@ -35,7 +35,7 @@ In order to get started CREATE an account and LOGIN and GET SWAPPING. If you wou
             zoom: #, // continent level
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
-
+`
 * How to get the coordinates of a location via Street Address [Geocode API]
 `
  function getLatLng(geocoder, address) {
