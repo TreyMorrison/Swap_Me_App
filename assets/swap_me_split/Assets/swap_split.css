@@ -1,6 +1,16 @@
+
+#map {
+    height: 5em;
+    width: 5em;
+    cursor: pointer !important;
+}
+html,
 body {
     font-family: Arial;
     color: white;
+     height: 100%;
+     margin: 0;
+     padding: 0;
 }
 
 .split {
@@ -30,3 +40,4 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
 }
+

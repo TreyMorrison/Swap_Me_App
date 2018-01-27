@@ -6,9 +6,11 @@ var map;
     function initMap() {
 
         console.log("Map initialisation");
-
         map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat:42.742189,lng:-93.19717100000003}, // TODO change to start location
+            center: {
+                lat: 42.742235,
+                lng: -93.189237999999
+            }, // TODO change to start location
             zoom: 10, // continent level
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
@@ -81,15 +83,14 @@ var map;
     console.log(add)
     function doGeocode(){
         var geocoder = new google.maps.Geocoder();
-        //I need the firebase Data to be connected in order to bounce back the addresses from the data. 
         getLatLng(geocoder, add);
-        getLatLng(geocoder, add);
+     
 
         // Wait for from and dest locations found ( Geocoder get delay )
         var waitForCoords = setInterval(function(){
             console.log("--- Interval");
 
-            if(callbackCounter==2){
+            if(callbackCounter==1){
                 clearInterval(waitForCoords);
                 console.log("--- Interval cleared");
 

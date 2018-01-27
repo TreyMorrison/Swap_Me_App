@@ -1,38 +1,33 @@
+var signUp =  function(email,password){
+ firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
 
-var signIn = function(email,password){
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-    
-            var errorMessage = error.message;
-            if (errorCode == 'auth/weak-password') {
-                alert('The password is too weak.');
-              } else {
-                alert(errorMessage);
-              }
-              console.log(error);
-              
-        // ...
-    });
+    var errorMessage = error.message;
+    if (errorCode == 'auth/weak-password') {
+        alert('The password is too weak.');
+      } else {
+        alert(errorMessage);
+      }
+      console.log(error);
+    // ...
+  });
 };
 
 
-
 (function($){
-    $('#button-login').on('click', function(evt){
+    $('#button-signup').on('click', function(evt){
         evt.preventDefault();
         var email = $('#input-username').val();
         var password = $('#input-password').val();
-
-        signIn(email, password);
-    
+        signUp(email, password);
     });
     
 
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-            window.location = './profile.html'
+            window.location = './profile_edit.html'
           var displayName = user.displayName;
           var email = user.email;
           var emailVerified = user.emailVerified;
