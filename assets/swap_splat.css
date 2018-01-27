@@ -1,3 +1,20 @@
+#map {
+  height: 10em;
+  width: 10em;
+  cursor: pointer !important;
+  position: absolute;
+  top: 27.5em;
+  left: 7.5em;
+}
+#map2 {
+  height: 20em;
+  width: 10em;
+  cursor: pointer !important;
+  position: absolute;
+  top: 67%;
+  left: 100%;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -64,7 +81,7 @@ html {
 }
 
 .title {
-  color: grey;
+  color: white;
 }
 
 .button {
@@ -73,7 +90,7 @@ html {
   display: inline-block;
   padding: 8px;
   color: white;
-  background-color: #000;
+  background-color: #4c124c;
   text-align: center;
   cursor: pointer;
   width: 100%;
@@ -85,4 +102,7 @@ html {
 
 #pic1, #pic2 {
  padding-top: 3%
+}
+h2, p {
+  color: white;
 }

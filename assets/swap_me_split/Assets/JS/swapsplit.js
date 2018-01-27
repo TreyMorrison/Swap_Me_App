@@ -1,4 +1,4 @@
-var map;
+var map, map2;
 var fromLocation;
 var destLocation;
 var callbackCounter = 0;
@@ -8,10 +8,10 @@ function initMap() {
     console.log("Map initialisation");
     map = new google.maps.Map(document.getElementById('map'), {
         center: {
-            lat: 42.742235,
-            lng: -93.189237999999
+            lat: 42.742689,
+            lng: -93.187531
         }, // TODO change to start location
-        zoom: 10, // continent level
+        zoom: 15, // continent level
         mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
@@ -72,18 +72,21 @@ function getLatLng(geocoder, address) {
     });
 }
 //get the address
-var add = document.getElementById("address").innerText
-console.log(add)
+var add = document.getElementById("address").innerText;
+var add2 = document.getElementById("address2").innerText;
+console.log(add);
+console.log(add2);
 function doGeocode() {
     var geocoder = new google.maps.Geocoder();
     getLatLng(geocoder, add);
+    getLatLng(geocoder, add2);
 
 
     // Wait for from and dest locations found ( Geocoder get delay )
     var waitForCoords = setInterval(function () {
         console.log("--- Interval");
 
-        if (callbackCounter == 1) {
+        if (callbackCounter == 2) {
             clearInterval(waitForCoords);
             console.log("--- Interval cleared");
 
