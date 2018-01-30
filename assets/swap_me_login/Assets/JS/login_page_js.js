@@ -32,7 +32,7 @@ var signIn = function(email,password){
 
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-            window.location = './profile.html'
+            window.location = './profile.html';
           var displayName = user.displayName;
           var email = user.email;
           var emailVerified = user.emailVerified;
@@ -41,7 +41,7 @@ var signIn = function(email,password){
           var uid = user.uid;
           var providerData = user.providerData;
 
-          console.log('Display Name:', displayName, 'E-mail:', email, 'User ID:', uid);
+
           
           // ...
         } else {

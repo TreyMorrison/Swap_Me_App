@@ -27,7 +27,7 @@ var signUp =  function(email,password){
 
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-            window.location = './profile_edit.html'
+            window.location = './profile_edit.html';
           var displayName = user.displayName;
           var email = user.email;
           var emailVerified = user.emailVerified;
