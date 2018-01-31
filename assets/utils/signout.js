@@ -4,7 +4,7 @@ var signOut = function(){
       }, function(error) {
         console.error('Sign Out Error', error);
       });
-      window.location = './landing_page.html'
+      window.location = './index.html'
 };
 
 (function($){
